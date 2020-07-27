@@ -23,6 +23,7 @@ submitedOneTime=false;
     }
     else if(form.dirty&&form.valid&&this.submitedOneTime){
       this.users.uploadInfo(form.value).subscribe(()=>{
+        this.users.login=true;
         this.router.navigate(['']);
       })
     }
