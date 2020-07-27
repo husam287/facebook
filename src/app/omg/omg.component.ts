@@ -11,6 +11,7 @@ export class OmgComponent implements OnInit {
 
   start=false;
   login=false;
+  endGame=false;
   constructor(private router:Router,private users:UsersService) { }
 
   ngOnInit(): void {
@@ -20,6 +21,7 @@ export class OmgComponent implements OnInit {
   startGame(){
     if(this.login){
       this.start=true
+      this.endGame=false
     }
     else{
       if(confirm('Please Login First')){
@@ -29,6 +31,7 @@ export class OmgComponent implements OnInit {
     
   }
   game(){
-    alert('شكرا يا بنتي على ثقتك الغالية')
+    alert('شكرا يا بنتي على ثقتك الغالية');
+    this.endGame=true;
   }
 }

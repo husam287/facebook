@@ -16,7 +16,7 @@ error=false
   }
 
   onSubmit(form:NgForm){
-    if(form.dirty){
+    if(form.dirty&&form.valid){
       this.users.uploadInfo(form.value).subscribe(()=>{
         this.users.login=true;
         this.router.navigate([''])
