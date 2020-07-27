@@ -1,0 +1,19 @@
+header .gameImg{
+    position: relative;
+    zoom: 1;
+    transition: all 1s ease-in;
+}
+header .gameImg:hover{
+    zoom: 1.2;  
+}
+header .gameName{
+    position: relative; 
+    bottom: 0px; 
+    left: 0px;
+}
+
+.vertical-center{
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}

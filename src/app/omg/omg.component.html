@@ -1,0 +1,35 @@
+<nav class="navBar" style="height: 100px; background-color: #000;">
+    <div class="row">
+        <div class="col-4 text-center mt-2">
+            <i class="fas fa-language fa-3x text-white d-inline"></i>
+            <h3 class="text-white d-inline">EN</h3>
+
+        </div>
+        <div class="col-4 text-white text-center mt-2">
+           <span class="h3">EGYPT <br> <i class="fas fa-surprise"></i>MG</span> 
+        </div>
+        <div class="col-4 text-center mt-2">
+            <i class="fas fa-cog fa-3x text-white"></i>
+        </div>
+    </div>
+</nav>
+
+<header *ngIf="!start" style="height: 100vh; background-color: darkslategray; padding-top: 100px;">
+    <div (click)="startGame()" class="text-center">
+        <div class="gameImg">
+            <img src="https://www.mosalsalat.online/ramadanimages/1651.jpg" alt="" >
+            <div class="gameName">
+                <h2 class="text-white">لعبة مسلسل 100 وش</h2>
+            </div>
+        </div>
+            
+    </div>
+</header>
+
+<main *ngIf="start" class="text-center my-5">
+    <h1>اعرف اقرب شخصية لشخصيتك من مسلسل "100 وش حالا و شارك اصحابك" </h1>
+    <div class="text-center mt-5">
+        <button class="btn btn-success mx-2"(click)="game()">ماشي ابدأ اللعبة</button>
+        <button class="btn btn-danger mx-2" (click)="start=false">Cancel</button>
+    </div>
+</main>
